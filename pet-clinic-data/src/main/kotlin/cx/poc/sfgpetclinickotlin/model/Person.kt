@@ -7,7 +7,7 @@ package cx.poc.sfgpetclinickotlin.model
 open class Person(
   var firstName: String = "",
   var lastName: String = ""
-)
+) : BaseEntity()
 
 /**
  * @date 2021-04-10

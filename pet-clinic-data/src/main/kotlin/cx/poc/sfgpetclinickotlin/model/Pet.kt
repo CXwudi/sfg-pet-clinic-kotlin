@@ -10,8 +10,8 @@ open class Pet(
   var petType: PetType? = null,
   var owner: Owner? = null,
   var birthDate: LocalDate? = null
-)
+) : BaseEntity()
 
 class PetType(
   var name: String = ""
-)
+) : BaseEntity()
