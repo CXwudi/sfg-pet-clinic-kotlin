@@ -11,5 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping
 class IndexController {
 
   @RequestMapping("", "/", "index", "index.html")
-  fun index(): String = "index"
+  fun index() = "index"
+}
+
+@Controller
+class VetIndexController {
+  @RequestMapping("/vets", "/vets/index")
+  fun listVets() = "vets/index"
 }
