@@ -22,7 +22,7 @@ abstract class AbstractMapService<T: BaseEntity, ID : Long> {
   fun save(`object`: T): T {
     `object`.id = nextId
     log.debug { "object new id = ${`object`.id}" }
-    map.put(`object`.id!!, `object`)
+    map[`object`.id!!] = `object`
     return `object`
   }
   fun deleteById(id: ID) { map.remove(id) }
