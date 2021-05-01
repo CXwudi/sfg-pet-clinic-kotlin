@@ -3,9 +3,7 @@ package cx.poc.sfgpetclinickotlin.bootstrap
 import cx.poc.sfgpetclinickotlin.model.Owner
 import cx.poc.sfgpetclinickotlin.model.Vet
 import cx.poc.sfgpetclinickotlin.service.OwnerService
-import cx.poc.sfgpetclinickotlin.service.OwnerServiceMap
 import cx.poc.sfgpetclinickotlin.service.VetService
-import cx.poc.sfgpetclinickotlin.service.VetServiceMap
 import mu.KotlinLogging
 import org.springframework.boot.CommandLineRunner
 import org.springframework.stereotype.Component
@@ -17,8 +15,8 @@ import org.springframework.stereotype.Component
 private val log = KotlinLogging.logger {}
 @Component
 class DataInitializer(
-  val ownerService: OwnerService = OwnerServiceMap(),
-  val vetService: VetService = VetServiceMap()
+  val ownerService: OwnerService,
+  val vetService: VetService
 ) : CommandLineRunner{
 
   override fun run(vararg args: String?) {
