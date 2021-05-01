@@ -22,14 +22,12 @@ class DataInitializer(
   override fun run(vararg args: String?) {
     for (i in 1L..2L){
       val owner = Owner("fname$i", "lname$i")
-      owner.id = i
       ownerService.save(owner)
     }
     log.info { "Loaded Owners..." }
 
     for (i in 1L..2L){
       val vet = Vet("fname$i", "lname$i")
-      vet.id = i
       vetService.save(vet)
     }
     log.info { "Loaded Vets..." }

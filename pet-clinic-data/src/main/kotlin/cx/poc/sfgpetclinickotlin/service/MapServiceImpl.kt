@@ -13,20 +13,10 @@ import org.springframework.stereotype.Service
   override fun findByLastName(lastName: String): Owner {
     TODO("Not yet implemented")
   }
-
-  override fun save(`object`: Owner) {
-    super.save(`object`.id!!, `object`)
-  }
 }
 
 @Service class PetServiceMap : AbstractMapService<Pet, Long>(), PetService {
-  override fun save(`object`: Pet) {
-    super.save(`object`.id!!, `object`)
-  }
 }
 
 @Service class VetServiceMap : AbstractMapService<Vet, Long>(), VetService {
-  override fun save(`object`: Vet) {
-    super.save(`object`.id!!, `object`)
-  }
 }
