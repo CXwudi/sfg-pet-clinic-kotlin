@@ -17,16 +17,16 @@ private val log = KotlinLogging.logger {}
 class DataInitializer(
   val ownerService: OwnerService,
   val vetService: VetService
-) : CommandLineRunner{
+) : CommandLineRunner {
 
   override fun run(vararg args: String?) {
-    for (i in 1L..2L){
+    for (i in 1L..2L) {
       val owner = Owner("fname$i", "lname$i")
       ownerService.save(owner)
     }
     log.info { "Loaded Owners..." }
 
-    for (i in 1L..2L){
+    for (i in 1L..2L) {
       val vet = Vet("fname$i", "lname$i")
       vetService.save(vet)
     }
