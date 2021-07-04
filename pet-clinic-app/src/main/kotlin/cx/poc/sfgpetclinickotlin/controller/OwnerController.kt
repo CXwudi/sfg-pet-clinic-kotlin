@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 @RequestMapping("owners")
 class OwnerController(val ownerService: OwnerService) {
   @RequestMapping("", "/", "index", "index.html")
-  fun listOwners(model: Model): String {
+  suspend fun listOwners(model: Model): String {
     model["owners"] = ownerService.findAll()
     return "owners/index"
   }

@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping
 @Controller
 class IndexController {
   @RequestMapping("", "/", "index", "index.html")
-  fun index() = "index"
+  suspend fun index() = "index"
 }
 

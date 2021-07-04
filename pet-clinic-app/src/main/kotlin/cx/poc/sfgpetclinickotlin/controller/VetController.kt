@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 @RequestMapping("vets")
 class VetController(val vetService: VetService) {
   @RequestMapping("", "/", "index", "index.html")
-  fun listVets(model: Model): String {
+  suspend fun listVets(model: Model): String {
     model["vets"] = vetService.findAll()
     return "vets/index"
   }
