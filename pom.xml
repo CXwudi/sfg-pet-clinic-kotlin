@@ -21,6 +21,7 @@
 	<properties>
 		<java.version>11</java.version>
 		<pet-clinic.version>0.0.1-SNAPSHOT</pet-clinic.version>
+		<spring-boot.run.skip>true</spring-boot.run.skip>
 	</properties>
 
 	<dependencies>

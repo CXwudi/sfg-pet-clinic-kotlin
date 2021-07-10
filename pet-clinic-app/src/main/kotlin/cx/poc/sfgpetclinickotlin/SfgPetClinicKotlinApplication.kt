@@ -12,5 +12,4 @@ class SfgPetClinicKotlinApplication
 fun main(args: Array<String>) {
   runApplication<SfgPetClinicKotlinApplication>(*args)
   log.info("started")
-  log.info{"${Person()}"}
 }
